@@ -6,23 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css">
-        div{
+        div {
             width: 100px;
             height: 100px;
             background-color: khaki;
             border-radius: 20px;
+            position: relative;
         }
     </style>
     <script type="text/javascript">
-        function mudacor(){
-            document.getElementById("caxa").style = "background-color: orange"
+        function mudacor() {
+            var caxa = document.getElementById("caxa").style = "background-color: orange; left: 300px"
+            caxa.style.left = "300px"
+        }
+        function aleatorio(){
+           let ale1,ale2
+
+           ale1 = Math.floor(Math.random(2) * 1000);
+           ale2 = Math.floor(Math.random(2) * 500);
+
+          
+        }
+        function color(){
+            let cor1,cor2,cor3
+
+            cor1 = Math.floor(Math.random(0) * 255);
+           cor2 = Math.floor(Math.random(0) * 255);
+           cor3 = Math.floor(Math.random(0) * 255);
+          
+
+            corre.style = `left: ${ale1}px; top: ${ale2}px; width: ${ale1}px; height: ${ale2}px; `
+            corre.style = `background-color: rgb(${cor1}, ${cor2}, ${cor3});`
         }
     </script>
     <title>Meu JS sinistro</title>
 </head>
 
 <body>
-    <div id="caxa" onclick="mudacor()" >Caaaaaixa</div>
+    <div id="caxa" onclick="mudacor()">Caaaaaixa</div>
+    <br>
+    <div id="corre" onmouseover = "aleatorio()" >caxa2</div>
 </body>
 
 </html>
